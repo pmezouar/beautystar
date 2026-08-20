@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+<!-- MAIN -->
+{% block main %}
+
+<main class="admin">
+  <section class="title-page">
+    <h1>Tableau de bord</h1>
+  </section>
+
+  <div class="admin-content dg">
+    <section class="menu df fdc">
+      <h2>Menu</h2>
+      <div class="navigation df fdc">
+        <a href="/dashboard"
+          ><i class="bi bi-speedometer2"></i> Tableau de bord</a
+        >
+        <a href="/services"><i class="bi bi-card-list"></i> Prestations</a>
+        <a href="/images"><i class="bi bi-image"></i> Photos</a>
+      </div>
+      <a href="/logout" class="logout">
+        <i class="bi bi-box-arrow-right"></i> Déconnexion
+      </a>
+    </section>
+
+    <section>
+      <p>Bienvenue sur votre tableau de bord.</p>
+    </section>
+  </div>
+</main>
+{% endblock %}

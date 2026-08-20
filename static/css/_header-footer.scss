@@ -1,0 +1,72 @@
+@use "settings";
+
+header,
+footer {
+  padding: 20px 50px;
+  box-shadow: 0 0 10px settings.$black;
+  background: settings.$gradient;
+  position: relative;
+  z-index: 99999999999999999999999999999999999999999999;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .logo {
+    max-height: 100px;
+    filter: drop-shadow(1px 1px 0 settings.$blackShadow);
+  }
+
+  .icons-nav {
+    display: none;
+
+    @media screen and (max-width: 960px) {
+      display: flex;
+    }
+
+    i {
+      font-size: 1.8rem;
+      color: settings.$black;
+    }
+
+    #closeIcon {
+      display: none;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 960px) {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    a {
+      color: settings.$black;
+    }
+  }
+}
+
+footer {
+  i {
+    font-size: 1.2rem;
+  }
+
+  * {
+    font-size: 0.9rem;
+    color: settings.$black;
+    text-align: center;
+  }
+
+  a {
+    font-weight: 600;
+  }
+}

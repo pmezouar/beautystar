@@ -1,0 +1,170 @@
+// ======
+// COLORS
+// ======
+$color1: #b9967b;
+$color1Overlay: rgba(185, 150, 123, 0.7);
+$color1Overlay2: rgba(185, 150, 123, 0.4);
+$color2: #b9a18e;
+$color3: #d2bfaf;
+$color4: #e6d7c7;
+$text: #333;
+$textLight: #f1f1f1;
+$black: #000;
+$blackOverlay: rgba(0, 0, 0, 0.7);
+$blackShadow: #00000040;
+$white: #fff;
+$whiteOverlay: rgba(255, 255, 255, 0.8);
+$gradient: linear-gradient(
+  120deg,
+  $color1,
+  $color2,
+  $color3,
+  $color4,
+  $color3,
+  $color2,
+  $color1
+);
+
+$gradientOverlay: linear-gradient(
+  120deg,
+  rgba(185, 150, 123, 0.2),
+  rgba(185, 161, 142, 0.2),
+  rgba(210, 191, 175, 0.2),
+  rgba(230, 215, 199, 0.2),
+  rgba(210, 191, 175, 0.2),
+  rgba(185, 161, 142, 0.2),
+  rgba(185, 150, 123, 0.2)
+);
+
+// =====
+// FONTS
+// =====
+
+@font-face {
+  font-family: "regular-brush";
+  src: url(../fonts/regularBrush.ttf);
+}
+
+$headingsFont:
+  "regular-brush", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+$bodyFont:
+  "Poppins", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+// =======
+// GENERAL
+// =======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  color: $text;
+  font-family: $bodyFont;
+  font-weight: normal;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  background: $gradient;
+}
+
+section {
+  padding: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingsFont;
+  font-weight: normal;
+  color: $black;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
+}
+
+// ===========
+// FLEX & GRID
+// ===========
+.df {
+  display: flex;
+  gap: 20px;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.flww {
+  flex-wrap: wrap;
+}
+
+.dg {
+  display: grid;
+  gap: 20px;
+}
+
+.tac {
+  text-align: center;
+}
+
+// TITLE PAGE
+.title-page {
+  width: 100%;
+  text-align: center;
+  * {
+    color: $black;
+    text-shadow: 0 0 2px $blackShadow;
+  }
+}

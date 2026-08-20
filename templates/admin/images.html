@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+<!-- MAIN -->
+{% block main %}
+
+<main class="admin">
+  <section class="title-page">
+    <h1>Photos</h1>
+  </section>
+
+  <div class="admin-content dg">
+    <section class="menu df fdc">
+      <h2>Menu</h2>
+      <div class="navigation df fdc">
+        <a href="/dashboard"
+          ><i class="bi bi-speedometer2"></i> Tableau de bord</a
+        >
+        <a href="/services"><i class="bi bi-card-list"></i> Prestations</a>
+        <a href="/images"><i class="bi bi-image"></i> Photos</a>
+      </div>
+      <a href="/logout" class="logout">
+        <i class="bi bi-box-arrow-right"></i> Déconnexion
+      </a>
+    </section>
+
+    <section class="content df fdc">
+      <a href="/add-image">
+        <button><i class="bi bi-plus-circle"></i> Ajouter une image</button>
+      </a>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <section id="flash-messages">
+        <div class="flashes">
+          {% for category, message in messages %}
+          <p class="{{ category }}">{{ message }}</p>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %} {% endwith %}
+
+      <div class="grid-container df flww">
+        {% for image in images %}
+        <div class="image-card">
+          <img
+            src="{{ url_for('static', filename='images/galerie/' ~ image) }}"
+            alt=""
+          />
+
+          <form
+            method="POST"
+            action="{{ url_for('delete_image', filename=image) }}"
+            onsubmit="return confirm('Supprimer cette image ?');"
+          >
+            <button type="submit">
+              <i class="bi bi-x-circle"></i>
+            </button>
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block main %}
+<main class="admin">
+    <section class="title-page">
+        <h1>Ajouter une photo</h1>
+    </section>
+
+    <section class="content df fdc jcc aic">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %}
+        <section id="flash-messages">
+            <div class="flashes">
+                {% for category, message in messages %}
+                <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %} {% endwith %}
+
+        <form
+            method="POST"
+            enctype="multipart/form-data"
+            class="form df fdc aic">
+            <label> Sélectionner une image </label>
+
+            <input
+                type="file"
+                name="image"
+                accept="image/png, image/jpeg, image/webp"
+                required />
+
+            <div class="df aic">
+                <a href="{{ url_for('images') }}" class="btn-cancel">
+                    Annuler
+                </a>
+
+                <button type="submit">
+                    <i class="bi bi-check-circle"></i> Ajouter
+                </button>
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}

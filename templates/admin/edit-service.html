@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block main %}
+<main class="admin">
+    <section class="title-page">
+        <h1>Modifier une prestation</h1>
+    </section>
+
+    <section class="content df fdc jcc aic tac">
+        <form method="POST" class="form df fdc aic">
+            <label> Catégorie </label>
+            <select name="category_service" required>
+                <option value="Onglerie" {% if service.category_service=="Onglerie" %}selected{% endif %}>
+                    Onglerie
+                </option>
+                <option value="Beauté du regard" {% if service.category_service=="Beauté du regard" %}selected{% endif
+                    %}>
+                    Beauté du regard
+                </option>
+            </select>
+
+            <label> Nom de la prestation </label>
+            <input type="text" name="name_service" value="{{ service.name_service }}" required />
+
+            <label> Prix (€) </label>
+            <input type="text" name="price_service" value="{{ service.price_service }}" required />
+
+            <div class="df aic">
+                <a href="{{ url_for('services') }}" class="btn-cancel"> Annuler </a>
+
+                <button type="submit">
+                    <i class="bi bi-check-circle"></i> Enregistrer
+                </button>
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}

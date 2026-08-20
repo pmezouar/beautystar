@@ -1,0 +1,62 @@
+@use "settings";
+
+.admin {
+  .admin-content {
+    grid-template-columns: 1fr 3fr;
+    gap: 0;
+
+    @media screen and (max-width: 960px) {
+      grid-template-columns: 1fr;
+    }
+
+    .menu {
+      border-right: 1px solid settings.$blackShadow;
+      padding: 50px;
+
+      @media screen and (max-width: 960px) {
+        border-bottom: 1px solid settings.$blackShadow;
+        border-right: none;
+        text-align: center;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media screen and (max-width: 960px) {
+          justify-content: center;
+        }
+
+        i {
+          font-size: 1.4rem;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          width: 100%;
+
+          @media screen and (max-width: 960px) {
+            justify-content: center;
+          }
+
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .logout {
+        border-top: 1px solid settings.$blackShadow;
+        padding-top: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    .content {
+      padding: 50px;
+      gap: 50px;
+    }
+  }
+}

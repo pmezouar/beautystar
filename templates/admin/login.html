@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+<!-- MAIN -->
+{% block main %}
+
+<main class="admin connexion">
+  <section class="title-page">
+    <h1>Connexion</h1>
+  </section>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %}
+  <section id="flash-messages">
+    <div class="flashes">
+      {% for category, message in messages %}
+      <p class="{{ category }}">{{ message }}</p>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %} {% endwith %}
+
+  <section class="df fdc aic">
+    <form action="/login" method="post" class="df fdc" autocomplete="off">
+      <input
+        type="text"
+        placeholder="Identifiant"
+        name="username"
+        autofocus
+        required
+      />
+      <input
+        type="password"
+        placeholder="Mot de passe"
+        name="password"
+        required
+      />
+
+      <button type="submit">Connexion</button>
+    </form>
+  </section>
+</main>
+{% endblock %}

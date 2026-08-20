@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+<!-- MAIN -->
+{% block main %}
+
+<main class="admin">
+    <section class="title-page">
+        <h1>Ajouter une prestation</h1>
+    </section>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <section id="flash-messages">
+        <div class="flashes">
+            {% for category, message in messages %}
+            <p class="{{ category }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %} {% endwith %}
+
+    <section class="content df fdc jcc aic tac">
+        <form
+            action="/add-service"
+            method="post"
+            class="df fdc aic"
+            autocomplete="off">
+            <select name="category_service" required>
+                <option disabled selected>Sélectionner une catégorie</option>
+                <option value="Onglerie">Onglerie</option>
+                <option value="Beauté du regard">Beauté du regard</option>
+            </select>
+
+            <input
+                type="text"
+                name="name_service"
+                placeholder="Nom de la prestation"
+                required />
+
+            <input
+                type="text"
+                name="price_service"
+                placeholder="Prix"
+                required />
+
+            <div class="df aic">
+                <a href="{{ url_for('services') }}" class="btn-cancel">
+                    Annuler
+                </a>
+                <button type="submit">Ajouter une prestation</button>
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}

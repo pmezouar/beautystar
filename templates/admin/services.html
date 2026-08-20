@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+<!-- MAIN -->
+{% block main %}
+
+<main class="admin">
+    <section class="title-page">
+        <h1>Prestations</h1>
+    </section>
+
+    <div class="admin-content dg">
+        <section class="menu df fdc">
+            <h2>Menu</h2>
+            <div class="navigation df fdc">
+                <a href="/dashboard"
+                    ><i class="bi bi-speedometer2"></i> Tableau de bord</a
+                >
+                <a href="/services"
+                    ><i class="bi bi-card-list"></i> Prestations</a
+                >
+                <a href="/images"><i class="bi bi-image"></i> Photos</a>
+            </div>
+            <a href="/logout" class="logout">
+                <i class="bi bi-box-arrow-right"></i> Déconnexion
+            </a>
+        </section>
+
+        <section class="content df fdc jcc">
+            <a href="/add-service">
+                <button>
+                    <i class="bi bi-plus-circle"></i>Ajouter une prestation
+                </button>
+            </a>
+
+            {% with messages = get_flashed_messages(with_categories=true) %} {%
+            if messages %}
+            <section id="flash-messages">
+                <div class="flashes">
+                    {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %} {% endwith %}
+
+            <div id="services" class="df fdc">
+                <div class="grid-container dg">
+                    <div class="container df fdc">
+                        <h3>Onglerie</h3>
+                        <ul class="df fdc">
+                            {% for service in onglerie_services %}
+                            <li class="df jcsb">
+                                <p>{{ service.name_service }}</p>
+
+                                <div class="df aic">
+                                    <p>{{ service.price_service }} €</p>
+                                    <a
+                                        href="{{ url_for('edit_service', service_id=service.id) }}"
+                                        title="Modifier">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <form
+                                        method="POST"
+                                        action="{{ url_for('delete_service', service_id=service.id) }}"
+                                        onsubmit="return confirm('Voulez-vous vraiment supprimer cette prestation ?');">
+                                        <button type="submit">
+                                            <i class="bi bi-x-circle"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li>Aucune prestation</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="container df fdc">
+                        <h3>Beauté du regard</h3>
+                        <ul class="df fdc">
+                            {% for service in regard_services %}
+                            <li class="df jcsb">
+                                <p>{{ service.name_service }}</p>
+
+                                <div class="df aic">
+                                    <p>{{ service.price_service }} €</p>
+                                    <a
+                                        href="{{ url_for('edit_service', service_id=service.id) }}"
+                                        title="Modifier">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <form
+                                        method="POST"
+                                        action="{{ url_for('delete_service', service_id=service.id) }}"
+                                        onsubmit="return confirm('Voulez-vous vraiment supprimer cette prestation ?');">
+                                        <button type="submit">
+                                            <i class="bi bi-x-circle"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li>Aucune prestation</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

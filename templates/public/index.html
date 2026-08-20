@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+<!-- MAIN -->
+{% block main %}
+
+<main class="homepage">
+  <section id="hero" class="df aic jcc">
+    <div class="container df fdc aic jcc">
+      <h1>Beauty Star</h1>
+      <h2>Institut de beauté à Tarascon - Onglerie et beauté du regard</h2>
+      <div class="df aic jcc flww">
+        <a href="tel:+33629370257"><button>Réserver maintenant</button></a>
+        <a href="#nos-prestations"
+          ><button>Découvrir les prestations</button></a
+        >
+      </div>
+    </div>
+  </section>
+  <section id="nos-prestations" class="df fdc">
+    <h2>Nos prestations</h2>
+    <div class="grid-container dg">
+      <div class="container df fdc">
+        <h3>Onglerie</h3>
+        <ul class="df fdc">
+          {% for service in onglerie_services %}
+
+          <li class="df jcsb">
+            <p>{{ service.name_service }}</p>
+            <p>{{ service.price_service }} €</p>
+          </li>
+          {% else %}
+          <li>Aucune prestation</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="container df fdc">
+        <h3>Beauté du regard</h3>
+        <ul class="df fdc">
+          {% for service in regard_services %}
+          <li class="df jcsb">
+            <p>{{ service.name_service }}</p>
+            <p>{{ service.price_service }} €</p>
+          </li>
+          {% else %}
+          <li>Aucune prestation</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="institut">
+    <div class="container df fdc">
+      <h2>L'institut</h2>
+      <p>
+        Beauty Star est un institut de beauté professionnel et moderne situé au
+        cœur de Tarascon, spécialisé dans l’onglerie et la mise en valeur du
+        regard. Notre équipe de professionnelles passionnées met tout en œuvre
+        pour offrir à chaque cliente une expérience personnalisée, alliant
+        expertise, écoute et bien-être.
+        <br /><br />
+        Nous proposons une large gamme de prestations, allant de la pose
+        d’ongles en gel aux soins des cils et sourcils, afin de répondre à
+        toutes vos envies beauté.
+        <br /><br />
+        Chez Beauty Star, chaque détail compte : nous utilisons des produits de
+        qualité et des techniques adaptées pour sublimer votre apparence tout en
+        garantissant confort et détente.
+        <br /><br />
+        Notre objectif est simple : révéler la beauté qui est en vous.
+      </p>
+      <a href="tel:+33629370257"><button>Réserver maintenant</button></a>
+    </div>
+  </section>
+
+  <section id="nos-realisations" class="df fdc aic">
+    <h2>Nos réalisations</h2>
+    <p>Voici quelques-unes de nos réalisations</p>
+    <div class="container dg aic">
+      {% for image in last_images %}
+      <img
+        src="{{ url_for('static', filename='images/galerie/' ~ image) }}"
+        alt="Réalisation"
+      />
+      {% else %}
+      <p>Aucune image disponible.</p>
+      {% endfor %}
+    </div>
+    <a href="/nos-realisations"
+      ><button>Découvrir toutes nos réalisatons</button></a
+    >
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="container df fdc">
+      <div class="dg">
+        <div class="item-contact df fdc">
+          <div class="df aic">
+            <i class="bi bi-geo-alt"></i>
+            <h3>Venir à l'institut</h3>
+          </div>
+          <a
+            href="https://www.google.com/maps/place/4+Pl.+du+March%C3%A9,+13150+Tarascon/@43.8061085,4.6577185,17z/data=!4m6!3m5!1s0x12b5dc648039fe41:0x9d85559df33ce730!8m2!3d43.8059954!4d4.6578101!16s%2Fg%2F11bw417sr7?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            class="map"
+          >
+            Institut Beauty Star
+            <br />
+            4 place du marché
+            <br />
+            13150 Tarascon
+          </a>
+        </div>
+
+        <div class="item-contact df fdc">
+          <div class="df aic">
+            <i class="bi bi-phone"></i>
+            <h3>Réserver</h3>
+          </div>
+          <ul class="df fdc">
+            <li>
+              <a href="tel:+33629370257">06.29.37.02.57</a>
+            </li>
+            <li>
+              <a href="tel:+33780895453">07.80.89.54.53</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
