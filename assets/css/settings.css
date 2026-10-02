@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "regular-brush";
+  src: url(../fonts/regularBrush.ttf);
+}
+
+:root {
+  --text: #333;
+  --text-light: #f1f1f1;
+  --black: #000;
+  --shadow: #00000040;
+  --white: #fff;
+  --gradient: linear-gradient(
+    120deg,
+    #b9967b,
+    #b9a18e,
+    #d2bfaf,
+    #e6d7c7,
+    #d2bfaf,
+    #b9a18e,
+    #b9967b
+  );
+
+  /* Fonts */
+  --body:
+    "Poppins", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  --headings:
+    "regular-brush", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body);
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--text);
+  transition: all 0.2s ease;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+  color: var(--black);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--black);
+
+  * {
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+p {
+  line-height: 30px;
+}
+
+b {
+  font-weight: 600;
+}

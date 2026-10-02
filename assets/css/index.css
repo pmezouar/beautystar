@@ -1,0 +1,17 @@
+@import "./settings.css";
+@import "./buttons.css";
+@import "./header.css";
+@import "./footer.css";
+
+/* Homepage */
+@import "./hero.css";
+@import "./institut.css";
+@import "./nos-prestations.css";
+@import "./nos-realisations.css";
+@import "./contact.css";
+
+/* Error 404 */
+@import "./error404.css";
+
+/* Legal */
+@import "./legal.css";

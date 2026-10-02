@@ -1,0 +1,32 @@
+{
+  "name": "Beauty Star - Onglerie & Beauté du Regard à Tarascon",
+  "short_name": "Beauty Star",
+  "description": "Beauty Star, institut de beauté à Tarascon spécialisé en onglerie et beauté du regard : pose gel, gainage, nail art, extensions de cils, volume russe, brow lift, pédicure et soins beauté. Réservez votre moment bien-être.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#fff",
+  "orientation": "portrait-primary",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": [
+    "beauty",
+    "nails",
+    "brow"
+  ],
+  "icons": [
+    {
+      "src": "./assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

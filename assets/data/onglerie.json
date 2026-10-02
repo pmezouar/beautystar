@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Pose ongle complète gel",
+        "price": "35 €"
+    },
+    {
+        "id": 2,
+        "name": "Remplissage",
+        "price": "30 €"
+    },
+        {
+        "id": 3,
+        "name": "Gainage",
+        "price": "30 €"
+    },
+    {
+        "id": 4,
+        "name": "Pédicure",
+        "price": "20 €"
+    },
+        {
+        "id": 5,
+        "name": "Remplissage pédicure",
+        "price": "20 €"
+    },
+    {
+        "id": 6,
+        "name": "Soin des mains",
+        "price": "15 €"
+    },
+        {
+        "id": 7,
+        "name": "Soin des pieds",
+        "price": "15 €"
+    },
+    {
+        "id": 8,
+        "name": "Dépose intéricure",
+        "price": "10 €"
+    }
+    ,
+    {
+        "id": 9,
+        "name": "French, Babyboomer & déco (supplément)",
+        "price": "Sur devis"
+    }
+]

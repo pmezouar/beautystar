@@ -1,0 +1,29 @@
+footer {
+  background: var(--gradient);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+  box-shadow: 0 0 10px var(--black);
+  z-index: 1;
+  position: relative;
+
+  * {
+    font-size: 14px !important;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    svg {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

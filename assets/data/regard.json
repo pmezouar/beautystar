@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Volume russe",
+        "price": "40 €"
+    },
+    {
+        "id": 2,
+        "name": "Volume mixte",
+        "price": "35 €"
+    },
+        {
+        "id": 3,
+        "name": "Cil à cil",
+        "price": "30 €"
+    },
+    {
+        "id": 4,
+        "name": "Rehaussement de cils coréen",
+        "price": "30 €"
+    },
+        {
+        "id": 5,
+        "name": "Brow lift",
+        "price": "25 €"
+    },
+    {
+        "id": 6,
+        "name": "Épilation sourcils au fil",
+        "price": "6 €"
+    },
+        {
+        "id": 7,
+        "name": "Restructuration des sourcils (décoloration)",
+        "price": "6 €"
+    },
+    {
+        "id": 8,
+        "name": "Teinture sourcils",
+        "price": "5 €"
+    }
+]

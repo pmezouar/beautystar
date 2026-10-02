@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  border-radius: 5px;
+  padding: 5px 20px;
+  box-shadow: 1px 1px 5px var(--black);
+  text-align: center;
+
+  &:hover {
+    box-shadow:
+      1px 1px 5px var(--black),
+      inset 0 0 10px var(--shadow);
+  }
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: var(--black);
+  border: none !important;
+}
+
+.btn-nav {
+  background: none;
+  border: none;
+}
