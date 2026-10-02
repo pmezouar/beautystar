@@ -12,7 +12,7 @@
 
 
 
-![Last Commit](https://img.shields.io/github/last-commit/olysweb/beautystar?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/pmezouar/beautystar?style=for-the-badge)
 
 ![Responsive](https://img.shields.io/badge/Design-Responsive-purple?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Production-success?style=for-the-badge)
 
